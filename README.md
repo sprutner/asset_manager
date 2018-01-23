@@ -5,7 +5,7 @@
 On your docker machine run:
 `sudo docker run -p 5000:5000 -d --rm --name asset_manager sprutner/asset_manager:latest`
 
-The server will now be reachable at http://<ip of docker server>:5000
+The server will now be reachable at `http://<ip of docker server>:5000`
 If you're running this locally, it will be http://localhost:5000
 
 
