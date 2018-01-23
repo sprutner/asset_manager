@@ -9,7 +9,7 @@ The server will now be reachable at http://<ip of docker server>:5000
 If you're running this locally, it will be http://localhost:5000
 
 
-## Adding a new asset to the databsse
+## Adding a new asset to the database
 
 Submit a POST request to `http://<ip of docker server>:5000/assets` with JSON data in the following format:
 

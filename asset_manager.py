@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_restful import Resource, Api, reqparse
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -130,6 +130,11 @@ class AssetsNameResource(Resource):
 api.add_resource(AssetsResource, '/asset/<asset_id>')
 api.add_resource(AssetsNameResource, '/asset/name/<name>')
 api.add_resource(AssetsListResource, '/assets')
+
+# Main page with instructions
+@app.route("/", methods=["GET"])
+def home():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     # Run with 'host=0.0.0.0' to enable Dockerized operation

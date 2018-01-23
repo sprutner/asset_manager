@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <h1>Asset Manager</h1>
+    A simple asset manager for spacecraft equipment.
+    <p><a href=https://github.com/sprutner/asset_manager>https://github.com/sprutner/asset_manager</a></p>
+
+    <h2>Adding a new asset to the database</h2>
+
+    Submit a POST request to http://<ip of docker server>:5000/assets with JSON data in the following format:
+
+    <p>
+    {
+    	"name":"antarctica",
+    	"asset_type": "antenna",
+    	"asset_class": "yagi"
+    }
+  </p>
+
+    <h2> Getting all assets </h2>
+
+    Submit a GET request to http://<ip of docker server>:5000/assets and you will receive an object containing all assets
+
+    <h2> Getting an asset by name </h2>
+
+    Submit a GET request to http://<ip of docker server>:5000/asset/name/<name> and you will receive that asset. e.g. http://localhost:5000/asset/name/antarctica
+
+    <h2> Getting an asset by asset_id </h2>
+
+    Submit a GET request to http://<ip of docker server>:5000/asset/<asset_id> and you will receive that asset. e.g. http://localhost:5000/asset/1
