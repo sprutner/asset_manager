@@ -8,6 +8,9 @@ On your docker machine run:
 The server will now be reachable at `http://<ip of docker server>:5000`
 If you're running this locally, it will be http://localhost:5000
 
+## Running tests
+
+You can run unittests with `python test_asset_manager.py`
 
 ## Adding a new asset to the database
 
